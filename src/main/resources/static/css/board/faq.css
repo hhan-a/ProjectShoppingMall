@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+.rhrortpsxj{
+	position: relative;
+}
+
+.which-inquiry{
+	position: absolute;
+    right: 0px;
+    top: 100px;
+    z-index: 20;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 17px;
+}
+
+.which-inquiry button{
+	font-size: 17px;
+	color: #222;
+}
+
+.bar{
+	width: 1px;
+    height: 13px;
+    margin: 0px 12px;
+    background-color: rgb(217, 217, 217);
+}
+
+#container>.wrap .cus-menu ul>li{
+	width: 190px;
+	height: 190px;
+	text-align: center;
+	border: 1px solid #ff8227;
+	border-radius: 5px;
+	position: relative;
+}
+
+#container>.wrap .cus-menu ul>li.target{
+	background-color: rgba(255,191,0,0.1);
+}
+
+#container>.wrap .cus-menu ul>li::before{
+	content:"";
+	position: absolute;
+	top:0;
+	left:7px;
+	width:180px;
+	height:180px;
+	background: no-repeat center 50px / 30%;
+	/* opacity: 0.5; */
+	filter: drop-shadow(0 0 0 #ff8227);
+}
+
+#container>.wrap .cus-menu ul>li:nth-of-type(1)::before{
+	background-image: url("/images/board/circle-question-regular.png")
+}
+#container>.wrap .cus-menu ul>li:nth-of-type(2)::before{
+	background-image: url("/images/board/circle-user-regular.png")
+}
+#container>.wrap .cus-menu ul>li:nth-of-type(3)::before{
+	background-image: url("/images/board/wallet-solid.png");
+	top:5px;
+	left:3px;
+}
+#container>.wrap .cus-menu ul>li:nth-of-type(4)::before{
+	background-image: url("/images/board/truck-solid.png");
+	top:9px;
+	left:-4px;
+	width:200px;
+	height:200px;
+}
+#container>.wrap .cus-menu ul>li:nth-of-type(5)::before{
+	background-image: url("/images/board/comment-dollar-solid.png");
+	top:9px;
+	left:5px;
+}
+#container>.wrap .cus-menu ul>li:nth-of-type(6)::before{
+	background-image: url("/images/board/file-circle-plus-solid.png");
+	top:9px;
+	left:8px;
+}
+
+#container>.wrap .cus-menu ul>li span{
+	position: relative;
+	top: 115px;
+}
+
+#container>.wrap .cus-list{
+	margin-top: 40px;
+}
+
+#container>.wrap .cus-list ul>li dl{
+	border-bottom: 1px solid #e9e9e9;
+}
+
+#container>.wrap .cus-list ul>li dl>*{
+	padding: 1em 0;
+}
+
+#container>.wrap .cus-list ul>li dl>*::before{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 16px;
+	border-radius: 50%;
+	text-align: center;
+	color: #fff;
+	margin-right: 10px;
+	
+}
+
+#container>.wrap .cus-list ul>li dl>dt.question::before {
+	content: "Q";
+	background-color: #ffbf00; 
+}
+
+#container>.wrap .cus-list ul>li dl>dd.answer::before {
+	content: "A";
+	background-color: #ff8227; 
+}
+
+#container>.wrap .cus-list ul>li dl>dd.answer{
+	display: none;
+	background-color: rgba(255,191,0,0.1);
+	padding: 1em 1em;
+}
+
+#container>.wrap .paging{
+	margin-top: 40px;
+}
+
+#container>.wrap .paging ol>li a{
+	display: inline-block;
+	padding: 0.5em 1em;
+	border: 1px solid #fff;
+	margin: 0 2px;
+}
+
+.select a{
+	color: #fff !important;
+	background-color: rgba(255,130,39,1); 
+}

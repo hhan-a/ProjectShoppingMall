@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+input[type=checkbox] {
+			display: inline-block;
+		}
+.cartsize{
+	width: 1050px;
+    margin: 0 auto;
+    padding-bottom: 80px
+}
+
+.cart-text{
+	padding: 50px 0 48px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.big{
+	 -webkit-box-pack: justify;
+	 letter-spacing: -0.5px;
+}
+
+.cart-list{
+	   width: 742px;
+}
+
+.select{
+	    align-items: center;
+    padding: 18px 10px 16px 2px;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.label{
+	display: inline-flex;
+    font-size: 14px;
+    line-height: 26px;
+    padding: 0;
+    color: #333;
+}
+
+.label-checkbox{
+	overflow: hidden;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    box-sizing: border-box;
+    padding: 0;
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+        cursor: default;
+}
+
+.checkbox-img{
+	display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  	border: 0;
+    vertical-align: top;
+}
+
+.crossline{
+	display: inline-block;
+    width: 1px;
+    height: 14px;
+    background: #ddd;
+    margin: 6px 21px 0 22px;
+    vertical-align: top;
+}
+.delete-button{
+	cursor: default;
+  	border-radius: 0;
+	font-size: 14px;
+    color: #333;
+}
+
+.cart-box{
+	    border-bottom: 1px solid rgb(244, 244, 244);
+	
+}
+
+.cart-boxlist{
+	padding: 115px 0px;
+    border-top: 1px solid rgb(51, 51, 51);
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+.delivery{
+	position: relative;
+    width: 284px;
+    min-height: 942px;
+    margin-left: auto;
+}
+
+.delivery-box{
+	position: absolute;
+    width: 284px;
+    padding-top: 60px;
+}
+.delivery-searchbox{
+	padding: 23px 19px 20px;
+    border: 1px solid #f2f2f2;
+    border-bottom: 0;
+}
+.delivery-text{
+	padding-left: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    background: url(https://res.kurly.com/pc/service/cart/2007/ico_location.svg) 0 50% no-repeat;
+    -webkit-background-size: 20px 20px;
+    background-size: 20px 20px;
+}
+.delivery-search{
+	padding-top: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+
+.strong-text{
+	padding-bottom: 16px;
+    font-weight: 500;
+}
+
+.strong-text em{
+	font-style: normal;
+    color: #ff8227;
+}
+.check{
+	white-space: nowrap;
+}
+.delivery-serach-button{
+	display: block;
+    padding: 0 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 36px;
+    border-radius: 3px;
+    color: #ff8227;
+    background-color: #fff;
+    border: 1px solid #ff8227;
+}
+.search-delivery{
+	font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    text-indent: -14px;
+    display: inline-block;
+}
+
+.price-box{
+	padding: 19px 18px 18px 20px;
+    border: 1px solid #f2f2f2;
+    background-color: #fafafa;
+}
+.first-p{
+	justify-content: space-between;
+	-webkit-box-pack: justify;
+	padding-top: 0;
+}
+.second-p{
+	justify-content: space-between;
+	-webkit-box-pack: justify;
+	padding-top: 12px;
+}
+.last-p{
+	display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-top: 18px;
+    border-top: 1px solid #f4f4f4;
+}
+.text-p{
+	width: 100px;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+}
+.price-p{
+	font-size: 18px;
+    line-height: 24px;
+    text-align: right;
+}
+.decide{
+	 padding-top: 20px;
+}
+.decide-button{
+	display: block;
+    padding: 0 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 56px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #ff8227;
+    border: 0 none;
+    font-weight: 500;
+	
+}
+.decide-button:disabled{
+	background-color: #ddd;
+}
+button[disabled], input[disabled] {
+    cursor: default;
+}
+.last-text{
+	padding: 12px 0;
+}
+.cartsize ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    list-style-type: none;
+}
+
+.goods-tit{
+	position: relative;
+	font-size: 24px;
+	font-weight: 600;
+	color: #000000;
+	padding: 0 0.5em;
+}
+.goods-price{
+	position: relative;
+	color: #000000;
+	padding: 0 0.5em;
+	font-size: 18px;
+	font-weight: 500;
+}
+

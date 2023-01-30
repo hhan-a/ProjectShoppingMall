@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" th:fragment="adminLayout(head, main)">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+	<!-- 추가 head 정보를 replace 할 위치 -->
+	<th:block th:replace="${head}" />
+    <!-- 공통적용할 css, js를 삽입하세요 -->
+	<link rel="stylesheet" href="/css/common/common.css">
+	<link rel="stylesheet" href="/css/common/admin-header.css">
+    <!-- include libraries(jQuery, bootstrap) -->
+</head>
+<body id="layout-admin">
+    <header>
+   		<h1></h1>
+   		<div class="wrap">
+   			<ul>
+   				<li>
+   					<a href="/admin">대시 보드</a>
+   				</li>
+   				<li>
+   					<dl>
+   						<dt>회원 관리</dt>
+   						<dd><a href="#">권한 부여</a></dd>
+   						<dd><a href="/admin/authority">회원 삭제</a></dd>
+   					</dl>
+   				</li>
+   				<li>
+   					<dl>
+   						<dt>물품 관리</dt>
+   						<dd><a href="/admin/goods">물품 추가</a></dd>
+   						<dd><a href="/admin/goods/list">물품 수정</a></dd>
+   						<dd><a href="#">물품 삭제</a></dd>
+   					</dl>
+   				</li>
+   				<li>
+   					<dl>
+   						<dt>카테고리 관리</dt>
+   						<dd><a href="/category/add">카테고리추가</a></dd>
+   						<dd><a href="#">카테고리 삭제</a></dd>
+   					</dl>
+   				</li>
+   				<li>
+   					<dl>
+   						<dt>게시판 관리</dt>
+   						<dd><a href="/admin/faq">Faq 게시판 리스트</a></dd>
+   						<dd><a href="/admin/one">1대1 게시판 리스트</a></dd>
+   					</dl>
+   				</li>
+   				<li>
+   					<dl>
+   						<a href="/">홈페이지로 이동</a>
+   					</dl>
+   				</li>
+   			</ul>
+   		</div>
+   	</header>
+   	<main th:replace="${main}">
+			<!-- main이 들어갈 위치입니다. -->
+	</main>
+</body>
+</html>

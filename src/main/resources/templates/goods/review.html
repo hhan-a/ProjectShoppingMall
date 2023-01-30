@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<div id="review">
+		<section>
+			<header>
+				<h2>상품 후기</h2>
+			</header>
+			<ul>
+				<li>후기 작성은 배송완료일로부터 30일 이내 가능합니다.</li>
+				<li>베스트 후기는 상단에 노출됩니다.</li>
+			</ul>
+			<div class="review-pics">
+				<button></button>
+				<button></button>
+			</div>
+			<div class="review-list">
+				<div></div>
+				<div>
+					<span>
+						총 ${count}개
+					</span>
+					<div>
+						<button>
+							추천순
+						</button>
+						<button>최근등록순</button>
+					</div>
+				</div>
+				<div class="review-notice">
+					<span>공지</span>
+					<button>금주의 베스트 후기 안내</button>
+				</div>
+				<div class="customer-review">
+					<div>
+						<div>
+							<span>김**</span>
+						</div>
+					</div>
+					<article>
+						<div>
+							<div>
+								<h3>${review.title}</h3>
+							</div>
+							<p>${review.content}</p>
+							<div>
+								<button>${review.pics}</button>
+							</div>
+							<footer>
+								<div>
+									<span>${review.createdDate}</span>
+								</div>
+								<button>
+									<span></span>
+									<span>도움돼요</span>
+								</button>
+							</footer>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+	</div>
+</html>

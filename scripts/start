@@ -1,0 +1,20 @@
+#!/bin/bash
+
+TOMCAT_ROOT="/home/ec2-user/src/webapp"
+DEPLOY_LOG="$TOMCAT_ROOT/deploy.log"
+DATE=`date +"[%Y-%m-%d %H:%M:%S]"`
+
+#배포된 war파일을 tomcat_web_root 경로에 압축해제
+cp -f /home/ec2-user/src/deploy/build/libs/Foofa.war  /home/ec2-user/src/webapp/
+cd /home/ec2-user/src/webapp/
+jar -xf Foofa.war
+echo "$DATE : WAR파일을 webapp 경로에 압축해제 완료!" >> $DEPLOY_LOG
+
+#톰캣 시작
+/usr/local/apache-tomcat-9.0.70/bin/startup.sh
+echo "$DATE : TOMCAT을 시작합니다." >> $DEPLOY_LOG
+echo "###################################################" >> $DEPLOY_LOG
+
+
+
+

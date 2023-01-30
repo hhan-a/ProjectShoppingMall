@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	th:replace="~{layout/user-layout :: layout(~{this::head}, ~{this::main})}">
+	
+<!-- th:replace="~{템플릿::fragment이름or아이디or태그}" -->
+<head>
+	<link rel="stylesheet" href="/css/common/main/common2.css">
+	<link rel="stylesheet" href="/css/common/main/slick.css">
+	<link rel="stylesheet" href="/css/common/main/slick-theme.css">
+</head>
+<main>
+	<h1>메인</h1>
+	<div class="wrap">
+	<!-- 메인슬라이드 -->
+		<div class="main1">
+			<ul>
+				<li>
+					<a href="/"><img src="/images/main00.jpg" style="width: 100%; height: auto; max-height:450px; object-fit: cover;"></a>
+				</li>
+			</ul>
+			<ul>
+				<li> 
+					<a href="/"><img src="/images/main01.jpg"style="width: 100%; height: auto; max-height:450px; object-fit: cover;"></a>
+				</li>
+			</ul>
+			<ul>
+				<li> 
+					<a href="/"><img src="/images/main02.jpg"style="width: 100%; height: auto; max-height:450px; object-fit: cover;"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="conta">
+			<div>
+				<button class="prev1"></button>
+			</div>
+			<div>
+				<button class="next1"></button>
+			</div>
+		</div>
+	</div>
+
+<!-- 2번째 슬라이드 -->
+	<div class="wrap">
+		<section>
+			<div class="main3">
+				<p class="title">Foofa의 추천상품</p>
+				<p class="sub-tit">Foofa에서 추천하는 상품을 만나보세요</p>
+				<div class="m3-btn">
+					<div><button class="prevArrow2"></button></div>
+					<div><button class="nextArrow2"></button></div>
+				</div>
+				<div class="visual2">			
+					<div>
+						<img src="/images/eaaec4d92602c4e52a02e9827322f566.jpg" style="width: 350px; height: 370px;">
+						<ul>
+							<li>
+								<a href="/" class="price-title">[제품명]첫번째 제품</a>
+								<br>
+								<span class="buy-price">7,000</span>원
+							</li>
+						</ul>
+					</div>
+					<div>
+						<img src="/images/eaaec4d92602c4e52a02e9827322f566.jpg" style="width: 350px; height: 370px;">
+						<ul>
+							<li>
+								<a href="/" class="price-title">[제품명]이름이 긴 제품확인</a>
+								<br>
+								<span class="buy-price">7,000</span>원
+							</li>
+						</ul>
+					</div>
+					<div>
+						<img src="/images/eaaec4d92602c4e52a02e9827322f566.jpg" style="width: 350px; height: 370px;">
+						<ul>
+							<li>
+								<a href="/" class="price-title">[제품명]짧은제품</a>
+								<br>
+								<span class="buy-price">7,000</span>원
+							</li>
+						</ul>
+					</div>
+					<div>
+						<img src="/images/eaaec4d92602c4e52a02e9827322f566.jpg" style="width: 350px; height: 370px;">
+						<ul>
+							<li>
+								<a href="/" class="price-title">제품명</a>
+								<br>
+								<span class="buy-price">10,000</span>원
+							</li>
+						</ul>
+					</div>
+					<div>
+						<img src="/images/eaaec4d92602c4e52a02e9827322f566.jpg" style="width: 350px; height: 370px;">
+						<ul>
+							<li>
+								<a href="/" class="price-title">[제품명]마지막</a>
+								<br>
+								<span class="buy-price">7,000</span>원
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					
+				</div>	
+			</div>
+		</section>
+	</div>
+	
+<!-- 배너 -->
+
+	<div>
+		<a href="/"><img  class="banner" src="/images/main00.jpg"></a>
+	</div>
+<!-- 3번째 슬라이드 -->
+	<div id="main2">
+
+		<div class="wrap view-size">
+			<section id="today-slide">
+				<div class="wrap">
+					<p class="title">오늘의 특가</p>
+
+					<p class="sub-tit">&#x23F0 오늘만 할인하는 특별한 상품 &#x23F0</p>
+
+					<div class="area">
+						<div id="display">
+							<ol class="goods-list-wrap flex">
+								<li class="goods-list" th:each="num : ${#numbers.sequence(1,8)}">
+									<div class="g-imgs">
+										<a href="#">											
+										</a>
+									</div>
+									<div class="goods-info">
+										<ul>
+											<li>
+												<span class="del-shop">Foofa 전용</span>
+												<span class="del-lowest">BEST</span>
+											</li>
+
+											<a href="/"><li class="g-name">상품_[[${num}]]</li></a>
+
+											<li class="g-price">
+												<span class="sale-r">할인</span>
+												<span class="buy-price">7,000</span>원
+												<span class="sell-price">10,000</span>원
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ol>
+							
+							
+							<div class="btn">
+								<button class="s-prev" onclick="prevSgoods()"></button>
+								<button class="s-next" onclick="nextSgoods()"></button>
+							</div>
+						</div>
+					</div>
+				</div>			
+			</section>
+		</div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"
+		type="text/javascript"></script>
+	<script src="/css/common/main/slick.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		$('.main1').slick({
+			dots : false,
+			infinite : true,
+			speed : 1000,
+			slidesToShow : 1,
+			autoplay : true,
+			autoplaySpeed : 500,
+			adaptiveHeight : true,
+			prevArrow : $('.prev1'),
+			nextArrow : $('.next1'),
+		});
+
+		$('.visual2').slick({
+			dots : false,
+			infinite : true,
+			speed : 300,
+			slidesToShow : 4,
+			slidesToScroll : 1,
+			autoplay : true,
+			autoplaySpeed : 2000,
+			// 지정한 클래스에 맞게 값을 지정한다.
+			prevArrow : $('.prevArrow2'),
+			nextArrow : $('.nextArrow2'),
+		});
+		
+		var lis = $(".goods-list");
+		var ea = 4;
+		var moveLength=(282+24);
+		var tot = lis.length;
+		var rightEa = tot-ea;
+		var leftEa = 0;
+		var position = 0;
+		
+		console.log(rigthEa);
+		
+		function nextSgoods(){
+			ea=4;
+			if(rightEa <= ea){
+				ea=rightEa;
+				$(".s-next").hide();
+			}
+			position = position+(moveLength*ea*1);
+			$(".goods-list-wrap").animate({marginLeft: -position}, 1000);
+			
+			leftEa=leftEa+ea//왼쪽의 이미지개수
+			rightEa=rightEa-ea;
+			
+			if(leftEa=>0){
+				$(".s-prev").show();
+			}
+		}
+
+		function prevSgoods(){
+			ea=4;
+			if(leftEa<=ea){
+				ea=leftEa;
+				$(".s-prev").hide();
+			}
+			position = position+(moveLength*ea*-1);
+			$(".goods-list-wrap").animate({marginLeft: -position}, 1000);
+
+			leftEa=leftEa-ea//왼쪽의 이미지개수
+			rightEa=rightEa+ea;
+			
+			if(rightEa>0){
+				$(".s-next").show();
+			}
+		}
+	</script>
+	<!-- 오른쪾 팝업창 -->
+	<div class="pop">
+		<div class="pop-2">
+			<div class="pop-3">
+				<a href="/board"><div class="pop-m">문의사항</div></a>
+				<a href="/list"><div class="pop-m">상품리스트</div></a>
+				<a href="/review"><div class="pop-m">후기게시판</div></a>
+				<a href="/carts"><div class="pop-m">장바구니</div></a>
+			</div>
+		</div>
+	</div>
+</main>
+</html>

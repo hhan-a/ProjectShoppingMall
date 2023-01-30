@@ -1,0 +1,56 @@
+@charset "UTF-8";
+body{font-size: 16px !important;}
+#layout-admin header a{
+	color: #fff;
+}
+#layout-admin header{
+	position: fixed;
+	left:0;
+	background: #ff8227;
+	min-height: 100vh;
+	min-width: 200px;
+	
+}
+#layout-admin header>.wrap ul{
+	padding: 0 20px;/* 메뉴좌우여백 */
+}
+#layout-admin header>.wrap ul>li{
+	padding-top: 20px;
+}
+#layout-admin header>.wrap ul>li:first-child{
+	padding: 30px 0;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	text-align: center;
+}
+#layout-admin header>.wrap ul>li:first-child a {
+	font-size: 32px;
+	font-weight: 700;
+}
+#layout-admin header>.wrap ul>li dl>dt{
+	padding: 1em 0;
+	font-size: 18px;
+	font-weight: bold;
+	color: rgba(255,255,255,1);
+}
+#layout-admin header>.wrap ul>li dl>dt a{
+	color: rgba(255,255,255,0.75);
+}
+#layout-admin header>.wrap ul>li dl>dd {
+	padding-left: 1em;
+}
+#layout-admin header>.wrap ul>li dl>dd a{
+	color: rgba(255,255,255,0.5);
+}
+#layout-admin header>.wrap ul>li dl>dt:first-child a{
+	padding: 1em 0;
+	font-size: 24px;
+	font-weight: 900;
+	color: rgba(255,255,255,1);
+}
+#layout-admin main{
+	width: 100%;
+	padding-top: 50px;
+	padding-left: calc(200px + 20px);
+	margin-right: auto;
+    margin-left: auto;
+}

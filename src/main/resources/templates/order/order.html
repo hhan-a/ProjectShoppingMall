@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	  xmlns:sec="https://www.thymeleaf.org/extras/spring-security">
+<head>
+
+<meta charset="UTF-8">
+<title>주문페이지</title>
+<!-- 공통적용할 css, js를 삽입하세요 -->
+<th:block th:insert="~{layout/header :: header}">header태그로 삽입됩니다.</th:block>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
+<script type="text/javascript" src="/js/order.js"></script>
+<link rel="stylesheet" href="/css/common/header.css">
+<link rel="stylesheet" href="/css/common/footer.css">
+<link rel="stylesheet" href="/css/common/common.css">
+<link rel="stylesheet" type="text/css" href="/css/common/main/order.css">
+
+</head>
+
+<body>
+<main>
+<div class="wrap">
+	<div id="body">
+		<div class="mid">
+			<div class="ordTitle">
+				<h3 class="title">주문/결제</h3>
+				<span class="steps"> 장바구니 > <em>주문결제 > </em>주문완료
+				</span>
+
+			</div>
+			<div data-component="customer">
+				<div class="customer-root">
+					<h2 class="del-adr-head customer-h2">구매자정보</h2>
+					<table class="customer-table">
+						<tbody>
+							<tr>
+								<td class="customer--1">이름</td>
+								<td class="customer--2">회원 이름
+								</td>
+								
+							</tr>
+							<tr>
+								<td class="customer--1">이메일</td>
+								<td class="customer--2">회원 이메일</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!--///////////////////////////주소입력////////////////////////////-->
+			<h2 class="del-adr-head customer-h2">받는 사람 정보</h2>
+			<form id="delivery-table">
+				<table  id="deliveryInfo" class="del-adr">
+					<tr>
+						<th class="del-adr-h">이름</th>
+						<td class="del-adr-d del-adr-d-name">
+							<input type="text" name="receivName" placeholder="수령하시는 분의 이름을 작성해주세요">
+						</td>
+					</tr>
+					<tr>
+						<th class="del-adr-h">연락처</th>
+						<td class="del-adr-d">
+							<input type="text" name="phone" placeholder="연락가능한 연락처를 작성해주세요">
+						</td>
+					</tr>
+					<tr>
+						<th class="del-adr-h">배송주소</th>
+						<td class="del-adr-d">
+							<div>
+								<ul id="menu-ad">
+									<!--기존주소-->
+									<li onclick="memuAdClicked(this)">
+										<input type="radio" name="addr-check" id="base-addr" />기존주소										
+										<div class="baseAddrs" id="base-address-disp">
+											<p>배송지 정보가 존재하지 않습니다.</p>
+										</div>
+									</li>
+									<!-- <li onclick="memuAdClicked(this)">
+										<input type="radio" name="addr-check" id="addr-list" />주소리스트
+										<div class="listAddrs" id="addreslist">
+										</div>
+									</li> -->
+								</ul>
+								
+								<label for="new-addr">
+									<input type="radio" name="addr-check" id="new-addr"/>
+									신규주소등록
+									<br>
+									<span class="newAddrs">
+										<input type="text" id="postcode" name="postcode" placeholder="우편번호">
+										<input type="button" class="page-btn" onclick="adrList()" value="우편번호 찾기" style="cursor: pointer;">
+										<br>
+										<input type="text" id="roadAddr" name="roadAddr" placeholder="도로명주소">
+										<input type="text" id="jibunAddr" name="jibunAddr" placeholder="지번주소">
+										<br>
+										<input type="text" id="detailAddr" name="detailAddr" placeholder="상세주소를 입력해주세요">
+										<button type="submit" id="btn-delivery" class="page-btn add-save-btn" style="cursor: pointer;">신규주소등록</button>
+									</span>
+								</label>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th class="del-req-msg-th del-adr-h">
+							<span>배송 요청사항</span>
+						</th>
+						<td class="del-adr-d">
+							<p>부재중일시 수령가능한 장소</p>
+							<input type="text" id="extraAddr" name="extraAddr" placeholder="ex)문앞, 경비실">
+						</td>
+					</tr>
+				
+				</table>
+			</form>
+			<div class="goods-info-title del-adr-head customer-h2">상품정보</div>
+			<div class="goods-info-group">
+				<table>
+					<thead>
+						<tr class="goods-or-list">
+							<td>선택</td>
+							<td>상품이미지</td>
+							<td>상품정보</td>
+							<td>구매수량</td>
+							<td>금액</td>
+							<td>배송비</td>
+							<td>주문 총 금액</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="goods-info" th:each=" dto : ${odlist}">
+							<td>
+								<input type="checkbox" class="cb" checked="checked">
+								<input type="hidden" readonly="readonly" class="goods-no"  th:value="${dto.goods.no}" >
+								<input type="hidden" readonly="readonly" class="quantity"  th:value="${dto.quantity}" >
+								<input type="hidden" readonly="readonly" class="title"  th:value="${dto.goods.title}" >
+								<input type="hidden" readonly="readonly" class="payPrice"  th:value="${dto.totPrice + dto.goods.dPrice}" >
+							</td>
+							<td><img alt="상품목록이미지" th:src="${dto.goods.defImgUrl}"  height="100px;"></td>
+							<td>
+								<p th:text="${dto.goods.title}">상품명</p>
+								<!-- <p th:text="${dto.goods.price}">단가</p> -->
+							</td>
+							<td th:text="${dto.quantity}">구매수량</td>
+							<td th:text="${dto.totPrice}">금액</td>
+							<td th:text="${dto.goods.dPrice}">배송비</td>
+							<td th:text="${dto.totPrice + dto.goods.dPrice}">주문 총 금액</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<section>
+				<div class="btn-pg-order" sec:authorize="isAuthenticated()">
+					<input type="hidden" id="delivery-no" >
+					<input type="hidden" id="user-email" th:value="${#authentication.name}" readonly="readonly">
+					<input type="hidden" id="user-name" th:value="${#authentication.principal.name}" readonly="readonly">
+					<button type="button" id="btn-pg" onclick="btnPgClicked()">결제하기</button>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+</main>
+</body>
+
+
+<footer>
+	<th:block th:insert="~{layout/footer :: footer}">footer태그가 삽입됩니다.</th:block>
+	
+</footer>
+</html>

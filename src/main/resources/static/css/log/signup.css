@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+
+
+.page-tit{
+	margin-bottom: 50px;
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #333;
+}
+.view-size-log{
+	margin: 50px auto;
+	min-width: 1050px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    background-color: rgb(255, 255, 255);
+}
+.signup-mainpage{
+	position: relative;
+	width: 640px;
+    margin: 50px auto;
+}
+.insert-page{
+	box-sizing: border-box;
+	padding-bottom: 10px;
+    border-bottom: 2px solid rgb(51, 51, 51);
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    line-height: 17px;
+    text-align: right;
+}
+.span-color{
+	color: rgb(255, 0, 0);
+}
+.font-style{
+	width: 139px;
+    padding-top: 12px;
+}
+.signup-lable{
+	font-weight: 500;
+    color: rgb(51, 51, 51);
+    line-height: 20px;
+}
+.signup-mainpage form>div input{
+	margin: 10px; 
+	background-position: center;
+	width: 333px;
+    height: 46px;
+    padding: 5px 11px 1px 15px;
+    border-radius: 4px;
+    border: 1px solid rgb(221, 221, 221);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(51, 51, 51);
+    outline: none;
+    box-sizing: border-box;
+}
+.reduplication{
+	font-weight: 700;
+	font-size: 12px;
+	margin: 10px; 
+	background-position: center;
+	display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 100px;
+    height: 46px;
+    border-radius: 3px;
+    color: #ff8227;
+    background-color: #fff;
+    border: 1px solid #ff8227;
+}
+.cls-rdds{
+	 border-top: 1px solid rgb(51, 51, 51);
+	 box-sizing: border-box;
+	 padding-bottom: 10px;
+	 
+}
+.cls-rrds{
+	margin-top: 20px;
+	display: inline-flex;
+}
+.cls-rrrdd{
+	line-height: normal;
+    color: rgb(51, 51, 51);
+    font-weight: 500;
+    font-size: 18px;
+}
+.signup-mainpage form>div p{	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+	font-size: 10px;
+}
+.vole-fo{
+	margin-left: 5px;
+	position: absolute;
+	margin-bottom: 20px;
+	text-align: center;
+	color: rgb(51, 51, 51);
+	font-size: 14px;
+	font-weight: 600;
+}
+.seccess-enter{
+	font-size: 14px;
+	display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 240px;
+    height: 56px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: #ff8227;
+    border: 0px none;
+    background-position: center;
+    margin: 50px auto;
+}
+.main-cbox{
+	margin-left: 105px;
+}
+.cbox{
+	margin-bottom: 10px;
+	display: flex;
+    width: 24px;
+    height: 24px;
+    margin-left: 200px;
+}
+.cbox-main{
+	display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-left: 100px;
+}
+.mod{
+	position: absolute;
+	right: 0px;
+	
+}
+input[type=checkbox]{
+	display: none;
+}
+
+input[type=checkbox]:checked + label::before{
+	background-color:#ff8227;
+}
+ 
+input[type=checkbox] + label::before {
+	content:"";
+	width:20px;
+	height:20px;
+	border-radius:50%;
+	background-image: url("/images/logicon/check-box.svg") ;
+	background-size : 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgba(255,255,255,1);
+	top: 2px;
+	margin-right: 5px;
+}
+.tit-main{
+	display: block;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #333;
+    font-weight: 500;
+}
+.box-title-tb{
+	padding-bottom: 20px;
+}
+.box-bt1{
+	padding: 10px 5px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.box-bt2{
+	padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 19px;
+}

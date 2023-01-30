@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	th:replace="~{layout/user-layout :: layout(~{this::head}, ~{this::main})}">
+	
+<head>
+	<link rel="stylesheet" href="/css/cart/cart.css">
+</head>
+<body>
+<main>
+	<div class="cartsize">
+		<h2 class="cart-text">장바구니</h2>
+		<div class="flex between big">
+			<div class="cart-list" th:if="${!#lists.isEmpty(list)}" th:each="dto : ${list}">
+				<div class="cart-box">
+					<div class="cart-boxlist">
+						<input type="checkbox">
+						<div><img th:src="${dto.goods.defImgUrl}" height="100px" width="100px"></div>
+						<div class="flex" style="padding: 1em;">
+							<div>
+								<span class="goods-tit" th:text="${dto.goods.title}">상품명</span>
+							</div>
+							<div>
+								<span class="goods-price" th:text="${#numbers.formatInteger(dto.goods.price , 0 ,'COMMA')}">단가</span>
+								<span >원</span>
+							</div>
+							<div>
+								<span class="price-p" th:text="${dto.quantity}">구매수량</span>
+								<span >개</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="price-box">	
+					<div class="flex first-p">
+						<span class="text-p">상품금액</span>
+						<span class="price-p" th:text="${#numbers.formatInteger(dto.goods.price*dto.quantity , 0 ,'COMMA')}">
+							<span>원</span>
+						</span>
+					</div>
+					<div class="flex second-p">
+					<span class="text-p">상품할인금액</span>
+					<span class="price-p">
+						<span th:text="${#numbers.formatInteger(dto.sPrice , 0 ,'COMMA')}">원</span>
+						</span>
+					</div>
+					<div class="flex second-p">
+						<span class="text-p">배송비</span>
+							<span class="price-p" th:text="${#numbers.formatInteger(dto.dPrice , 0 ,'COMMA')}">
+							<span>원</span>
+							</span>
+						</div>
+					<div class="flex last-p"><span class="text-p">결제예정금액</span>
+						<span class="price-p">
+							<strong th:text="${#numbers.formatInteger(dto.goods.price*dto.quantity+dto.dPrice-dto.sPrice , 0 ,'COMMA')}"></strong>
+							<span>원</span>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="delivery">
+				<div class="delivery-box">
+				<div class="delivery-searchbox">	
+					<h3 class="delivery-text">배송지</h3>
+					<div class="delivery-search">
+						<p class="strong-text">
+							<em>배송지를 등록</em>
+							하고
+							<br>
+							<span class="check">구매 가능한 상품을 확인하세요!</span>
+						</p>
+						<button class="delivery-serach-button">
+							<span class="search-delivery"><img src="https://res.kurly.com/pc/service/cart/2007/ico_search.svg" alt="" class="css-1m3kac1 e4nu7ef0">주소검색</span>
+						</button>
+					</div>
+				</div>
+				<div class="decide">
+					<button class="decide-button" type="button" disabled><span>상품을 담아주세요</span></button>
+					<ul class="last-text">
+						<li>[주문완료] 상태일 경우에만 주문 취소 가능합니다.</li>
+						<li>[마이컬리 &gt; 주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.</li>
+					</ul>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+</body>
+</html>

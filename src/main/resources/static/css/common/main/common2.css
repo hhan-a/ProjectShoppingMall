@@ -1,0 +1,292 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* Slider */
+body {
+	background-color: white;
+	display: block;
+	margin: 0 50px;
+	height: 100%;
+}
+
+.main {
+	font-family: Arial;
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.pop{
+	position: absolute;
+	top: 85%;
+	right: 15px;
+	bottom: 0px;
+	height: 150%;
+}
+.pop-2{
+	position: sticky;
+	top: 30vh;
+	width: 80px;
+	right: 20px;
+	font-size: 12px;
+	line-height: 15px;
+	color: black;
+	z-index: 1;
+}
+.pop-3{
+    width: 80px;
+    border-width: 1px 1px 0px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-top-color: rgb(221, 221, 221);
+    border-right-color: rgb(221, 221, 221);
+    border-left-color: rgb(221, 221, 221);
+    border-image: initial;
+    border-bottom-style: initial;
+    border-bottom-color: initial;
+    background-color: rgb(255, 255, 255);
+}
+.pop-m{
+	height: 29px;
+    padding-top: 5px;
+    text-align: center;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+/* /////////////////1번 슬라이드/////////////// */
+/* /////////////////1번 슬라이드/////////////// */
+/* /////////////////1번 슬라이드/////////////// */
+.main1 {
+	position:static;
+	min-width:auto;
+	margin-top: 3%;
+}
+.conta{
+	position : absolute;
+	width: 95%;
+	height: 40px;
+	top:40%;
+}
+.prev1{
+	position : absolute;
+	width:40px;
+	height :40px;
+	opacity:30%;
+	left:5%;
+	background-image:url('/images/icon/circle-chevron-left-solid.svg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.next1{
+	position : absolute;
+	width : 40px;
+	height : 40px;
+	opacity:30%;
+	right:5%;
+	background-image:url('/images/icon/circle-chevron-right-solid.svg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.banner{
+	text-align: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 300px;
+	position: static;
+	margin-bottom: 5%;
+}
+/* //////////////2번 슬라이드//////////// */
+/* //////////////2번 슬라이드//////////// */
+/* //////////////2번 슬라이드//////////// */
+#main2 >.wrap>*{
+	margin-top: 50px;
+	margin-bottom: 5%;
+}
+.title{
+	font-size: 35px;
+	font-weight: bold;
+	color: #ff8227;
+	text-align: center;
+	
+}
+
+.sub-tit{
+	text-align: center;
+	margin-bottom: 20px;
+
+	font-size: 15px;
+	color: gray;
+
+	margin-top: 50px;
+
+}
+
+#today-slide>.wrap>.t-menu{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.center{
+	justify-content: center;
+}
+#today-slide>.wrap .area{
+	position: relative;
+}
+#today-slide>.wrap #display{
+	overflow: hidden;
+	margin-bottom: 100px;
+	border-bottom: 1px solid #a9a9a9; 
+}
+
+ol{
+	list-style-type: decimal;
+	/* margin-block-start:1em; */ /* 카테고리랑 겹쳐서 주석처리함  */
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+#display>ol>li.goods-list{
+	width: 282px;
+	margin-right: 24px;
+}
+#display>ol>li>div.g-imgs>a {
+    position: relative;
+    display: block;
+    width: 282px;
+    height: 282px;
+    background-image: url(/images/eaaec4d92602c4e52a02e9827322f566.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.del-shop{
+	display: inline-block;
+	padding: 0 5px;
+	height: 20px;
+	line-height: 20px;
+	color:white;
+	background-color: #ff8227;
+	border-radius: 5px;
+	font-size: 12px;
+}
+.del-lowest{
+	display: inline-block;
+	padding: 0 5px;
+	height: 20px;
+	line-height: 20px;
+	color:black;
+	border-radius: 5px;
+	font-size: 12px;
+	border: 1px solid black;
+}
+.g-name{
+	font-size: 15px;
+	font-weight: bold;
+}
+.sale-r{
+	color: #ff8227;
+	font-size: 18px;
+}
+.buy-price{
+	font-size: 17px;
+	font-weight: bold;
+}
+.sell-price{
+	font-size: 13px;
+	color: #828282;
+	text-decoration: line-through;
+}
+
+#display>.btn button{
+	position: absolute;
+	top:35%;
+	width: 40px;
+	height: 40px;
+	border: 1px solid;
+	border-radius:50%;
+	background-repeat :no-repeat;
+	background-size: 50%;
+	background-position: center;
+}
+
+#display>.btn>.s-prev{
+	background-image: url('/images/icon/angle-left-solid.svg');
+	left: -30px;
+}
+#display>.btn>.s-next{
+	background-image: url('/images/icon/angle-right-solid.svg');
+	right: -30px;
+}
+
+/*/////////////////////// 3번 슬라이드////////////////// */
+/*/////////////////////// 3번 슬라이드////////////////// */
+/*/////////////////////// 3번 슬라이드////////////////// */
+.main3 {
+	padding: 15px;
+	width: 90%;
+	height: auto;
+	margin: 7% 10% 10% 5%;
+	position: static;
+}
+.price-title{
+	color: #ff8227;
+	font-size: 15px;
+	font-weight: bold;
+}
+.pro-price{
+	text-align: center;}
+
+.m3-btn{
+	width: 100%;
+	height: 30px;
+	position: static;
+	margin-bottom: 5px;
+}
+
+.prevArrow2{
+	width:25px;
+	height :25px;
+	opacity:40%;
+	right:14%;
+	position:absolute;
+	background-image: url('/images/icon/angle-left-solid.svg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.nextArrow2{
+	width:25px;
+	height :25px;
+	opacity:40%;
+	right:12%;
+	position:absolute;
+	background-image: url('/images/icon/angle-right-solid.svg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+.l-side {
+	position: relative;
+	width: 50%;
+	height: 50px;
+	background-color: white;
+}
+
+.l-btn {
+	position: relative;
+	text-align: center;
+}
+
+
+
+

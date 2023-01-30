@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	th:replace="layout/user-layout :: layout(~{this::head}, ~{this::main})">
+<head>
+
+</head>
+
+<main>
+	<h1>메인컨텐츠</h1>
+	<div class="wrap view-size"> 
+		<p>상품리스트</p>
+		<ul>
+			<th:block th:each="dto:${list}">
+				<table>
+					<tr>
+						<td>이미지</td>
+						<td>상품명</td>
+						<td>가격</td>
+						<td>수정</td>
+						<td>삭제</td>
+					</tr>
+					<tr>
+						<td><img width="120px" th:src="${dto.defImgUrl}"></td>
+						<td>[[${dto.title}]]</td>
+						<td>[[${dto.price}]]</td>
+						<td><button ><a th:href="|/admin/common/goods/${dto.no}|">수정</a></button></td>
+						<td><form th:action="|/admin/delete/${dto.no}|" th:method="delete"><button type="submit">삭제</button></form></td>
+					</tr>
+				</table>		
+			</th:block>
+		</ul>
+	</div>
+</main>
+</html>

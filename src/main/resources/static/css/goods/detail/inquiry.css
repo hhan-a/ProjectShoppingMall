@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+div{
+	display: block;
+}
+
+tr{
+	display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+#inquiry>div{
+	margin-bottom: 60px;
+}
+
+.inquiry-button{
+	position: absolute;
+    right: 0px;
+}
+
+.inquiry-button>button{
+	border-radius: 3px;
+	display: block;
+    padding: 0px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: #ff8227;
+    border: 0px none;
+}
+
+.inquiry-button>button>span{
+	font-size: 14px;
+	display: inline-block;
+    font-weight: 500;
+}
+
+.inquiry-info{
+	padding-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+.inquiry-info>strong{
+	display: block;
+    padding-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    color: rgb(51, 51, 51);
+}
+
+.inquiry-info>ul{
+	line-height: 19px;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+}
+
+.inquiry-info>ul>li{
+	padding-left: 10px;
+}
+
+.inquiry-info>ul>li::before{
+	display: inline-block;
+    width: 2px;
+    height: 2px;
+    margin: 11px 6px 0px -10px;
+    background: rgb(153, 153, 153);
+    vertical-align: top;
+    content: "";
+}
+
+.inquiry-table>table{
+	width: 100%;
+	border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.inquiry-table>table>thead{
+	height: 58px;
+    border-top: 2px solid rgb(51, 51, 51);
+    border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+.inquiry-table>table>thead>tr>th{
+	font-weight: 500;
+    letter-spacing: -0.5px;
+    color: rgb(51, 51, 51);
+    width: 100px;
+}
+
+.inquiry-table>table>thead>tr .title{
+	width: 710px;
+}
+
+.inquiry-table>table>tbody{
+	display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.inquiry-table>table>tbody>tr{
+	height: 64px;
+    border-bottom: 1px solid rgb(244, 244, 244);
+    line-height: 19px;
+    letter-spacing: -0.5px;
+}
+
+.inquiry-table>table>tbody>tr:first-child>td:first-child{
+	text-align: left;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+.inquiry-table>table>tbody>tr:first-child>td:nth-child(2),
+.inquiry-table>table>tbody>tr:first-child>td:nth-child(3),
+.inquiry-table>table>tbody>tr:first-child>td:nth-child(4){
+	text-align: center;
+    color: rgb(153, 153, 153);
+}
+
+.inquiry-table>table>tbody>tr>td:nth-child(1){
+	text-align: left;
+    padding: 0px 20px;
+    cursor: pointer;
+    color: rgb(153, 153, 153);
+}
+
+.inquiry-table>table>tbody>tr>td:nth-child(2),
+.inquiry-table>table>tbody>tr>td:nth-child(3){
+	text-align: center;
+    color: rgb(153, 153, 153);
+}
+.inquiry-table>table>tbody>tr>td:nth-child(4){
+	text-align: center;
+    color: ff8227;
+}
+
+.inquiry-page-button{
+	position: relative;
+    width: 100%;
+    height: 44px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.inquiry-page-button>div>button:first-child{
+	background-image: url(https://res.kurly.com/kurly/ico/2021/paging-prev-disabled.svg);
+    cursor: default;
+    width: 44px;
+    height: 44px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inquiry-page-button>div>button>div{
+	overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+}
+
+.inquiry-page-button>div>button:last-child{
+	width: 44px;
+    height: 44px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(https://res.kurly.com/kurly/ico/2021/paging-next-activated.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inquiry-page-button>div button + button {
+    margin-left: 12px;
+}

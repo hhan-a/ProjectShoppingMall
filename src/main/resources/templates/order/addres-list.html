@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+	<div th:if="${#lists.isEmpty(list)}">
+		배송지 정보가 존재하지 않습니다.
+	</div>
+	<ol th:each="dto:${list}">
+		<li>
+			<span th:text="${dto.receivName}">받는사람</span>
+			(<span th:text="${dto.extraAddress}">요청사항</span>)
+		</li>
+		<li th:text="${dto.phone}">
+			전화번호
+		</li>
+		<li>
+			(<span th:text="${dto.postcode}">우편번호</span>)
+			<span th:text="${dto.roadAddr}">도로명</span>
+			<span th:text="${dto.jibunAddr}">지번주소</span>
+			<span th:text="${dto.detailAddr}">상세주소</span>
+			<div><button class="btn padding-h-1">선택</button></div>
+		</li>
+	</ol>
+</html>

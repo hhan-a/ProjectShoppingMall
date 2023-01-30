@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	th:replace="layout/user-layout :: layout(~{this::head}, ~{this::main})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/log/login.css">
+</head>
+<body>
+<th:block th:insert="~{layout/header :: header}" />
+<main>
+	<h1>로그인 페이지</h1>
+	<div class="wrap view-size-log">
+		<section>
+			<h1>로그인</h1>
+			<div class="wrap">
+				<p class="page-tit">로그인</p>
+			</div>
+		</section>
+	</div>
+	<section id="login-sec">
+		<h1>로그인 입력</h1>
+		<div class="wrap view-size-log">
+			<form action="/login" method="post">
+				<ul>
+					<li>
+						<input class="id-info" name="email" type="text" placeholder="아이디 또는 이메일을 입력해 주세요">
+					</li>
+					<li>
+						<input class="pass-info" name="pass" type="password" placeholder="비밀번호를 입력해 주세요">
+					</li>
+					<li>
+						<div class="find-id-pass">
+							<a href="#">아이디 찾기</a>
+							<span class="find-style"></span>
+							<a href="#">비밀번호 변경</a>
+						</div>
+					</li>
+					<li>
+						<button class="btn-style-login" >로그인</button>
+					</li>
+				</ul>
+			</form>
+			<form action="/signup">
+				<ul>
+					<li>
+						<button class="btn-style-signup">회원가입</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</section>
+</main>
+<th:block th:insert="~{layout/footer :: footer}" />
+</body>
+</html>

@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+.top {
+	position: relative;
+}
+
+.one-reg {
+	padding: 0.5em 1em;
+	border: 1px dashed #222;
+	border-radius: 3px;
+	position: absolute;
+	top: 15px;
+	right: 10px;
+}
+
+.board-size{
+	width: 800px;
+	margin: 0 auto;
+}
+
+.board-size h3{
+	margin-top: 100px;
+	margin-bottom: 30px;
+	
+}
+
+
+.one-table {
+	width: 100%;
+	border-top: 1px solid #444444;
+    border-collapse: collapse;
+}
+
+.one-table th{
+	border-bottom: 1px solid #444444;
+    padding: 10px;
+	text-align: center;
+}
+
+.one-table td{
+	border-bottom: 1px solid #444444;
+    padding: 10px;
+    text-align: left;
+}
+
+.one-table td p{
+	margin: 0;
+}
+.one-table>thead>tr>th{
+	
+}
+
+.one-table>tbody>tr>td{
+	padding: 10px;
+	
+}

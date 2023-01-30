@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<header>
+	<h1>상단영역</h1>
+		<div class="wrap view-size">
+			<!-- ////////////////////////////로고&상단메뉴//////////////////////////// -->
+			<section id="header" class="">
+				<h1>로고&amp;상단메뉴</h1>
+				<div>
+					<!-- 로고&회원가입 -->
+					<div class="header">
+						<!-- 첫번째헤더 회원가입로그인고객센터 -->
+						<div class="flex first-h">
+							<a href="/signup" class="ghldnjsrkdlq">회원가입</a>
+							<div class="bar"></div>
+							<a sec:authorize="isAnonymous()" href="/login" class="fhrmdls">로그인</a>
+							<a sec:authorize="isAuthenticated()" href="/logout" class="fhrmdkdnt">로그아웃</a>
+							<div class="bar"></div>
+							<div class="rhrortpsxj">
+								<a>
+									고객센터
+									<span class="cs-triangle"></span>
+								</a>
+								<div class="cs-menu">
+									<div><a href="/board">공지 및 QnA</a></div>
+									<div>대량주문 문의</div>
+								</div>
+							</div>
+						</div>
+						<!-- 두번째헤더 로고검색배송찜카트 -->
+						<div class="second-h">
+							<!-- 로고 -->
+							<div class="second-h-xmf flex">
+
+								<a href="/">
+									<img alt="aaa" src="/images/header/foofa-logo.png" width="120px">
+								</a>
+
+							</div>
+							<!-- 검색창 -->
+							<div class="rjatorxmf">
+								<div class="flex rjator">
+									<input type="text" placeholder="검색어를 입력해주세요">
+									<button></button>
+								</div>
+							</div>
+							<!-- 배송정보/찜/카트 -->
+							<div class="icon-menuxmf">
+								<div class="flex icon-menu">
+									<div class=qothd>
+										<img alt="qothd" width="25px" src="/images/header/location.png">
+									</div>
+									<div class="tooltip">
+										<div class="tooltip2">
+											<div class="tooltipxmf">
+												<p class="tooltip-text">
+													<strong>배송지를 등록</strong>
+													하고
+													<br>
+													<span>구매 가능한 상품을 확인하세요!</span>
+												</p>
+												<div class="tooltip-button flex">
+													<button><span>로그인</span></button>
+													<button>
+														<img alt="ccc" src="/images/header/search-white.png">
+														<p>
+															주소검색
+														</p>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<button class="zzim">
+										<img alt="zzim" width="25px" src="/images/header/love.png">
+									</button>
+									<div class="wkdqkrnsl">
+										<button class="cart" onclick="location.href='/carts'">
+											<img alt="cart" width="25px" src="/images/header/shopping-cart.png">
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 카테고리 -->
+					<div class="category">
+						<div class="categoryxmf">
+							<div class="left-cate" value="0">
+								<div class="left-category">
+									<span class="category-list"></span>
+									<span class="zkxprhfl">카테고리</span>
+								</div>
+								<div class="cate-wrap">
+									<!-- 카테고리 삽입공간 -->
+								</div>
+							</div>
+							<ul class="center-category">
+								<li><span><a href="/list">신상품</a></span></li>
+								<li><span>베스트</span></li>
+								<li><span>푸파이벤트</span></li>
+								<li><span><a href="/admin">관리자페이지</a></span></li>
+							</ul>
+							<div class="right-category">
+								<a href="#">
+									<span>새벽 · 야간</span>
+									배송안내
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+</header>
+</html>

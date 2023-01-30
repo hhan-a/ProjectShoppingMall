@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/extras/spring-security"
+	th:fragment="layout(addHead, addMain)">
+<head>
+<meta charset="UTF-8">
+<title>Foofa</title>
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+<script src="/js/chat.js"></script>
+<script src="/js/stomp.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="/js/category.js"></script>
+<!-- 추가head 소스가 삽입되는 지점입니다. -->
+<th:block th:replace="${addHead}" />
+<!-- 공통적용할 css, js를 삽입하세요 -->
+<link rel="stylesheet" href="/css/common/common.css">
+<link rel="stylesheet" href="/css/common/header.css">
+<link rel="stylesheet" href="/css/common/footer.css">
+<link rel="stylesheet" href="/css/common/chat-bot.css">
+
+
+
+
+</head>
+<body>
+	<th:block th:insert="~{layout/header :: header}">header태그로 삽입됩니다.</th:block>
+	<th:block th:replace="${addMain}">메인태그로 대체됩니다.</th:block>
+	<th:block th:insert="~{layout/footer :: footer}">footer태그가 삽입됩니다.</th:block>
+	<aside id="chat-bot">
+			<h1>챗봇</h1>
+			<div class="wrap">
+				<button type="button" onclick="openChat(this)">실시간 문의</button>
+				<th:block th:insert="~{common/chat-bot::#chat-disp}" />
+			</div>
+	</aside>
+</body>
+
+</html>

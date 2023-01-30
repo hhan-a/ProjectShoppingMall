@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+	<ul th:if="${baseadr}">
+		<li>
+			<span th:text="${baseadr.receivName}">받는사람</span>
+			(<span th:text="${baseadr.extraAddr}">요청사항</span>)
+		</li>
+		<li th:text="${baseadr.phone}">
+			전화번호
+		</li>
+		<li>
+			(<span th:text="${baseadr.postcode}">우편번호</span>)
+			<span th:text="${baseadr.roadAddr}">도로명</span>
+			<span th:text="${baseadr.jibunAddr}">지번주소</span>
+			<span th:text="${baseadr.detailAddr}">상세주소</span>
+			
+			<button class="btn">정보수정</button>
+			<input type="hidden" th:value="${baseadr.no}" id="addressNo">
+		</li>
+	</ul>
+</html>

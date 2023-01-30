@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	th:replace="layout/user-layout :: layout(~{this::head}, ~{this::main})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/log/signup.css">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="/js/term.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<script type="text/javascript">
+	function change() {
+		var ptag = document.getElementById("btn-email-style");
+		ptag.style.color = "rgba(221, 221, 221,1)";
+		ptag.style.fontSize = "12px";
+		ptag.style.border = "1px solid rgba(221, 221, 221,1)";
+	}
+</script>
+</head>
+<body>
+	<th:block th:insert="~{layout/header :: header}" />
+	<main class="signup-main">
+		<h1>회원가입 페이지</h1>
+		<div class="wrap view-size-log">
+			<h1>회원가입</h1>
+			<div class="wrap">
+				<div class="page-tit">회원가입</div>
+			</div>
+			<div class="signup-mainpage">
+				<form action="/signup" method="post">
+					<div class="insert-page">
+						<span class="span-color">*</span> 필수입력사항
+					</div>
+					<div class="flex">
+						<div class="font-style">
+							<label class="signup-lable">이메일</label> <span class="span-color">*</span>
+						</div>
+						<div>
+							<input type="text" name="email" placeholder="예: foofa@foofa.com ">
+						</div>
+						<div>
+							<button type="button" class="reduplication" id="btn-email-style"
+								onclick="change()">중복확인</button>
+						</div>
+					</div>
+					<div class="flex">
+						<div class="font-style">
+							<label class="signup-lable">비밀번호</label> <span class="span-color">*</span>
+						</div>
+						<div>
+							<input type="password" name="pass" placeholder="비밀번호를 입력해주세요">
+						</div>
+					</div>
+					<div class="flex">
+						<div class="font-style">
+							<label class="signup-lable">비밀번호확인</label> <span
+								class="span-color">*</span>
+						</div>
+						<div>
+							<input type="password" placeholder="비밀번호를 한번 더 입력해주세요">
+						</div>
+					</div>
+					<div class="flex">
+						<div class="font-style">
+							<label class="signup-lable">이름</label> <span class="span-color">*</span>
+						</div>
+						<div>
+							<input type="text" name="name" placeholder="이름을 입력해 주세요">
+						</div>
+					</div>
+					<div class="term">
+						<div class="flex cls-rdds">
+							<div class="cls-rrds">
+								<label>이용약관동의</label> <span class="span-color">*</span>
+								<div class="main-cbox">
+									<input type="checkbox" id="term-all"> <label
+										for="term-all"><span class="cls-rrrdd">전체
+											동의합니다.</span></label>
+									<p>선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="cbox">
+							<input type="checkbox" id="ckbox-z"> <label for="ckbox-z"><span
+								class="vole-fo">이용약관 동의(필수)</span></label> <a class="mod" href="#ex1"
+								rel="modal:open">[약관보기]</a>
+							<div id="ex1" class="modal">
+								<strong class="tit-main">총칙</strong>
+								<p>
+									<strong class="tit-main">제 1조[목적]</strong> 이 약관은 주식회사 푸파(이하
+									주식회사 푸파 또는 주식회사 푸파가 운영하는 인터넷사이트를 “푸파”라 함)가 운영하는 온라인쇼핑몰에서 제공하는
+									전자상거래 관련 서비스(이하 “서비스”라 함)를 이용함에 있어 푸파와 이용자의 권리, 의무 및 책임사항을 규정함을
+									목적으로 합니다. <br> *PC통신, 스마트폰 앱, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에
+									반하지 않는 한 이 약관을 준용합니다. <strong class="tit-main">제
+										2조[정의]</strong> 1. “사이버몰”이란 푸파가 상품 또는 용역(이하 “상품 등” 이라 함)을 이용자에게 제공하기
+									위하여 컴퓨터 등 정보통신설비를 이용하여 상품 등을 거래할 수 있도록 설정한 가상의
+									영업장(http://www.foofa.com 등 푸파가 운영하는 웹사이트 및 모바일 웹, 앱 등을 모두 포함)을
+									말합니다. <br> 2. "이용자"란 푸파에 접속하여 이 약관에 따라 컬리가 제공하는 서비스를 이용하는
+									고객을 말합니다. <br> 3. “회원”이란 푸파에 회원등록을 한 자로서, 계속적으로 푸파가 제공하는
+									서비스를 이용할 수 있는 자를 말합니다. <br> 4. "휴면회원"이란 푸파의 회원 중 최종접속일로부터
+									1년 이상 서비스 이용 기록이 없는 자를 말합니다. 휴면회원은 푸파의 정책에 따라 서비스 이용이 제한될 수
+									있으며, 다시 정상적인 회원 서비스를 이용하기 위하여는 거래 안전 등을 위하여 푸파가 정하는 본인확인 절차 등을
+									이행하여야 합니다. <br> 5. “마켓플레이스 서비스”란 푸파가 제공하는 통신판매중개 서비스 및 관련
+									부가서비스 일체를 말합니다. <br>
+								</p>
+								<a href="#" rel="modal:close"></a>
+							</div>
+						</div>
+						<div class="cbox">
+							<input type="checkbox" id="ckbox-y"> <label for="ckbox-y"><span
+								class="vole-fo">개인정보 수집,이용 동의(필수)</span></label> <a class="mod"
+								href="#ex2" rel="modal:open">[약관보기]</a>
+							<div id="ex2" class="modal">
+								<h2>개인정보 수집·이용 동의(필수)</h2>
+								<table class="box-title-tb">
+									<colgroup>
+										<col width="50%">
+										<col width="25%">
+										<col width="25%">
+									</colgroup>
+									<thead>
+										<tr class="box-bt1">
+											<th scope="row">수집목적</th>
+											<th scope="row">수집항목</th>
+											<th scope="row">보유기간</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="box-bt2">
+											<td>회원 가입의사 확인, 이용자 식별 및 본인여부, 회원자격 유지·관리, 계약 이행 및 약관변경
+												등의 고지를 위한 연락, 본인의사 확인 및 민원 등의 고객 고충 처리, 부정이용 방지, 비인가 사용방지 및
+												서비스 제공 및 계약의 이행, 서비스 이용 및 상담, 문의, 후기 등 원활한 의사소통 경로 확보, 맞춤형
+												회원 서비스 제공, 거점 기반 서비스 제공</td>
+											<td>이름, 아이디, 비밀번호, 휴대폰번호, 이메일, 주소</td>
+											<td>회원탈퇴 <br> 즉시파기 <br> 부정이용 방지를 위하여 30일 동안 보관
+												(아이디, 휴대폰 번호) 후 파기
+											</td>
+										</tr>
+										<tr class="box-bt2">
+											<td>서비스방문 및 이용기록 분석, 부정이용 방지 등을 위한 기록 관리</td>
+											<td>서비스 이용기록, IP주소, 쿠키, MAC주소, 모바일 기기정보(앱 버전, OS 버전),
+												ADID/IDFA(광고식별자)</td>
+											<td>회원 탈퇴 즉시 또는 이용 목적 달성 즉시 파기</td>
+										</tr>
+									</tbody>
+								</table>
+								<a href="#" rel="modal:close"></a>
+							</div>
+						</div>
+						<div class="cbox">
+							<input type="checkbox" id="ckbox-s"> <label for="ckbox-s"><span
+								class="vole-fo">무료배송,할인쿠폰 등 혜택/정보 수신동의(선택)</span></label>
+						</div>
+						<div class="cbox">
+							<input type="checkbox" id="ckbox-j"> <label for="ckbox-j"><span
+								class="vole-fo">본인은 만14세 이상입니다.(필수)</span></label>
+						</div>
+						<div>
+
+							<button class="seccess-enter">가입하기</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+	<th:block th:insert="~{layout/footer :: footer}" />
+</body>
+</html>

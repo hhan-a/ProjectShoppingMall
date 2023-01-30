@@ -1,0 +1,258 @@
+@charset "UTF-8";
+
+.why-foofa{
+	padding: 100px 0px 88px;
+    border-top: 1px solid rgb(238, 238, 238);
+}
+
+.why{
+	text-align: center;
+}
+
+.why>span{
+	font-weight: 400;
+    font-size: 33px;
+    color: rgb(102, 102, 102);
+}
+
+.reason{
+	display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 21px;
+}
+
+.reason>dl{
+	width: 315px;
+    padding-top: 59px;
+}
+
+.reason>dl>dt{
+	display: block;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ff8227;
+    line-height: 27px;
+    text-align: center;
+}
+
+.reason>dl:nth-child(1)>dt::before{
+	content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0px auto 10px;
+    background: url(/images/goods/detail/bottom/correct.png) 50% 50% no-repeat;
+    background-size: 40px;
+}
+
+.reason>dl:nth-child(2)>dt::before{
+	content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0px auto 10px;
+    background: url(/images/goods/detail/bottom/delivery-truck.png) 50% 50% no-repeat;
+    background-size: 40px;
+}
+
+.reason>dl:nth-child(3)>dt::before{
+	content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0px auto 10px;
+    background: url(/images/goods/detail/bottom/best-price.png) 50% 50% no-repeat;
+    background-size: 40px;
+}
+	
+.reason>dl>dd{
+	padding-top: 22px;
+    font-weight: 300;
+    font-size: 16px;
+    color: rgb(51, 51, 51);
+    line-height: 25px;
+    text-align: center;
+}
+
+.reason>dl>dd>span{
+	display: block;
+    padding-top: 7px;
+    font-size: 11px;
+    color: rgb(102, 102, 102);
+}
+
+.customer-center>div{
+	padding: 60px 5px 0px;
+    border-top: 1px solid rgb(221, 221, 221);	
+}
+
+.customer-center>div>div>h5{
+	font-weight: 500;
+    font-size: 28px;
+    color: rgb(102, 102, 102);
+}
+
+.customer-center>div>div>p{
+	padding-top: 31px;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(102, 102, 102);
+    line-height: 23px;
+}
+.customer-center>div>div>p>span{
+	display: block;
+    padding-top: 6px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.customer-center>div>ul{
+	display: flex;
+    padding: 59px 0px 71px;
+}
+
+.customer-center>div>ul>li{
+	flex-shrink: 0;
+    width: 340px;
+}
+
+.customer-center>div>ul>li>strong{
+	display: block;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ff8227;
+    line-height: 27px;
+}
+.customer-center>div>ul>li>.katalk{
+	display: block;
+    padding-top: 13px;
+    font-weight: 300;
+    font-size: 15px;
+    color: rgb(102, 102, 102);
+    line-height: 22px;
+}
+
+.customer-center>div>ul>li>strong:first-child::before{
+	content: "";
+    display: inline-block;
+    width: 3px;
+    height: 20px;
+    margin: 5px 10px 0px 0px;
+    background-color: #ff8227;
+    vertical-align: top;
+}
+
+.customer-center>div>ul>li>span{
+	display: block;
+    padding-top: 9px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+
+
+.exchange-refund, .withdraw-order{
+	display: flex;
+    position: relative;
+    padding: 14px 0px 17px;
+    border-top: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    border-left: 1px solid rgb(221, 221, 221);
+    border-image: initial;
+    border-bottom: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+.exchange-refund>strong, .withdraw-order>strong, .delivery-info>strong{
+	width: 179px;
+    padding-left: 29px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ff8227;
+}
+
+.exchange-refund>p, .withdraw-order>p{
+	white-space: pre-line;
+}
+
+.exchange-refund01, .exchange-refund02, .exchange-refund03,
+.withdraw-order01, .withdraw-order02{
+	display: flex;
+    padding: 39px 0px 40px;
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.exchange-refund01>strong, .exchange-refund02>strong, .exchange-refund03>strong,
+.withdraw-order01>strong, .withdraw-order02>strong{
+	width: 340px;
+    padding-left: 31px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.exchange-refund01>p, .exchange-refund02>p, .exchange-refund03>p
+.withdraw-order01>p, .withdraw-order02>p{
+	padding: 2px 20px 0px 0px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    white-space: pre-line;
+}
+
+.exchange-refund01>p>span, .exchange-refund02>p>span{
+	display: block;
+    padding-top: 22px;
+}
+
+.exchange-refund02>p>strong{
+	display: block;
+    padding: 30px 0 6px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #ff8227;
+    line-height: 22px;
+}
+
+.exchange-refund03>p>span{
+	display: block;
+}
+
+.exchange-refund03>p>span::before{
+	content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 9px 4px 0px 0px;
+    border-radius: 100%;
+    background-color: rgb(51, 51, 51);
+    vertical-align: 4px;
+}
+
+.withdraw-order>p>strong{
+	font-weight: 500;
+    color: #666;
+}
+
+.delivery-info{
+	display: flex;
+    position: relative;
+    padding: 14px 0px 17px;
+    border: 1px solid rgb(221, 221, 221);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+footer p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
